@@ -1,0 +1,19 @@
+# Netlify 配置：静态托管整站 + /api/youdao 路由到查词代理函数
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# 前端 fetch('/api/youdao') 相对路径同源直达函数（rewrite 保留 POST 方法），
+# 因此 index.html 无需任何改动，也无需配置 CORS。
+[[redirects]]
+  from = "/api/youdao"
+  to = "/.netlify/functions/youdao"
+  status = 200
+  force = true
+
+# 可选的安全头
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -1,0 +1,13 @@
+# 不需要部署到 Netlify 的大文件 / 本地文件
+# （页面只需 index.html、data/、audio/、netlify/、netlify.toml）
+*.pdf
+*.mp4
+.trae/
+data/_preview/
+scripts/test_asr*.py
+scripts/asr_1a_sample.json
+风格/
+
+# 系统文件
+Thumbs.db
+.DS_Store
