@@ -525,22 +525,77 @@ html.vocab-collapsed #vocabRail{display:flex;position:fixed;right:16px;top:120px
 }
 @media (max-width:768px){
   .sidebar{display:none;}
-  .main-area{margin-left:0;padding-bottom:62px;}
-  .tabbar{display:block;}
+  .main-area{margin-left:0;padding-bottom:64px;}
+  .tabbar{display:block;height:64px;}
   /* 移动端：把播放器抬到底部 Tab 栏之上，避免遮挡变速/音量控件 */
-  .podcast-player{bottom:62px;padding:var(--space-2) var(--space-4) var(--space-3);}
+  .podcast-player{bottom:64px;padding:var(--space-2) var(--space-4) var(--space-3);}
   .page-inner{padding:var(--space-4) var(--space-4) var(--space-10);}
   .quick-grid{grid-template-columns:1fr;}
   .prof-grid{grid-template-columns:1fr;}
   .badge-grid{grid-template-columns:repeat(3,1fr);}
   .help-grid{grid-template-columns:1fr;}
-  .sen-en{font-size:17px;}
+
+  /* ---- 移动端排版收缩：标题/大字块降级 ---- */
+  .hero-mascot{font-size:46px;}
+  .hero-greet h1{font-size:19px;}
+  .hero-greet p{font-size:12.5px;}
+  .ring-val{font-size:19px;}
+  .daily-goal-card b{font-size:17px;}
+  .section-title{font-size:15.5px;}
+  .page-head h2{font-size:18.5px;}
+  .reading-title{font-size:18.5px;}
+  .reading-title .ri{font-size:18.5px;}
+  #bookSelectView h2{font-size:20px;}
+  .book-card .ic{font-size:34px;}
+  .quick-card .ic{font-size:28px;}
+  .scen-card .ic{font-size:30px;}
+  .flip-front .w{font-size:25px;}
+  .flip-back .w{font-size:20px;}
+  .flip-back .zh{font-size:16.5px;}
+  .stat-card .ic{font-size:22px;}
+  .stat-card .v{font-size:19px;}
+  .badge .ic{font-size:23px;}
+  .rev-done .ic{font-size:38px;}
+  .empty-state .ic{font-size:36px;}
+  .dict-word{font-size:17.5px;}
+  .bee-pop .bp-bee{font-size:36px;}
+  .sen-en{font-size:calc(var(--sen-font,19px) * 0.87);}
+
+  /* ---- 移动端触控目标加大（≥44px 或明显增大） ---- */
+  .tab-btn{font-size:11.5px;gap:2px;}
+  .tab-btn .ic{font-size:22px;}
+  .seg button{padding:9px 18px;font-size:14px;}
+  .fs-ctl button{width:34px;height:34px;font-size:15px;}
+  .fs-ctl .fs-val{min-width:30px;font-size:13px;}
+  .sen-chip{padding:6px 14px;font-size:13px;margin-top:0;}
+  .back-btn{padding:10px 18px;font-size:14px;}
+  .switch{padding:8px 14px;font-size:13.5px;}
+  .vocab-toggle{padding:7px 14px;font-size:12.5px;}
+  .pill-control{padding:8px 14px;font-size:13.5px;}
+  .speed-select{padding:9px 12px;font-size:13.5px;}
+  .dict-speak{width:40px;height:40px;font-size:18px;}
+  .dict-close{width:36px;height:36px;font-size:22px;}
+  .dict-star{font-size:26px;}
+  .v-star{font-size:22px;padding:2px 4px;}
+  .card-btn{padding:12px 24px;font-size:15.5px;}
+  .msg-tts{padding:6px 12px;font-size:12.5px;}
+  .inputbar input{padding:11px 14px;font-size:15px;}
+  .send-btn,.mic-btn{width:46px;height:46px;}
+  .btn{padding:12px 22px;font-size:14.5px;}
 }
 @media (max-width:480px){
-  .page-inner{padding:var(--space-3);}
+  .page-inner{padding:var(--space-3) var(--space-3) var(--space-10);}
   .hero{flex-direction:column;text-align:center;}
-  .sen-en{font-size:16px;}
+  .sen-en{font-size:calc(var(--sen-font,19px) * 0.84);}
   .badge-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-greet h1{font-size:18px;}
+  .reading-title{font-size:17.5px;}
+  .reading-title .ri{font-size:17.5px;}
+  .page-head h2{font-size:17.5px;}
+  .flip-front .w{font-size:22px;}
+  .deck-rules{font-size:11.5px;}
+  .now-label{max-width:150px;}
+  .vol-slider{width:60px;}
 }
 </style>
 </head>

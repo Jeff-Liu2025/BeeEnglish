@@ -8,6 +8,9 @@ scripts/test_asr*.py
 scripts/asr_1a_sample.json
 风格/
 
+# 本地测试脚本与产物
+_mobile_regress*
+
 # 系统文件
 Thumbs.db
 .DS_Store
